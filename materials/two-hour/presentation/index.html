@@ -1,87 +1,345 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>JavaScript Fundamentals</title>
+        <title>JavaScript Fundamentals</title>
 
-		<meta name="description" content="Learning things">
-		<meta name="author" content="Pam Selle">
+        <meta name="description" content="JavaScript Fundamentals curriculum">
+        <meta name="author" content="Pam Selle">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<div class="slides">
-				<section>
-					<section>
-						<h1>Variables and data types</h1>
-					</section>
-					<section>what is a variable? declaration and instantiation</section>
-					<section>Types chart</section>
-					<section>Notes on math (interactive) and number types</section>
-				</section>
-				<section>
-					<section>
-						<h1>Functions, scope, and more</h1>
-					</section>
-					<section>Functions like recipes</section>
-					<section>structure, the function keyword</section>
-					<section>anonymous functions</section>
-					<section>Callbacks</section>
-					<section>Closures</section>
-				</section>
-				<section>
-					<section>
-						<h1>Logic and loops</h1>
-					</section>
-					<section>comparison chart (try a comparison statement in the console)</section>
-					<section>if statements</section>
-					<section>if/else if/else</section>
-					<section>for loops (scope mention)</section>
-				</section>
-				<section>
-					<section>
-						<h1>Objects and the DOM</h1>
-					</section>
-					<section>Object literal code</section>
-					<section>Objects grow</section>
-					<section>prototypes</section>
-					<section>Document Object Model</section>
-					<section>DOM is just a series of objects!</section>
-					<section>Methods, common cases</section>
-				</section>
-			</div>
+            <div class="slides">
+                <section>
+                    <h2>JavaScript Fundamentals</h2>
+                </section>
+                <section>
+                    <section>
+                        <h1>Setup</h1>
+                    </section>
+                    <section>
+                        <h3>Checklist</h3>
+                        <ul>
+                            <li class="fragment">Laptop (or share)</li>
+                            <li class="fragment">Browser open (Chrome or Firefox preferred)</li>
+                        </ul>
+                        <p class="fragment">Let's go!</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Variables and data types</h1>
+                    </section>
+                    <section>
+                        <h3>Variables</h3>
+                        <p>A way to store information</p>
+                        <p>Declaration</p>
+                        <pre><code>var info;</code></pre>
+                        <p>Instantiation</p>
+                        <pre><code>var info2 = 'JavaScript rules!';</code></pre>
+                        <pre><code>info3 = 'JavaScript rules!';</code></pre>
+                    </section>
+                    <section>
+                        <h3>Data Types</h3>
+                        <table class="styled-table">
+                            <tr>
+                                <td>Strings</td>
+                                <td><code class="javascript">var bananas = "I have some bananas";</code></td>
+                                <td>Contained in quotes, quotes must match (single ' or double "). Escape quotes with \</td>
+                            </tr>
+                            <tr>
+                                <td>Numbers</td>
+                                <td><code class="javascript">var numberOfBananas = 5;</code></td>
+                                <td>Only ONE number type -- all numbers act like numbers</td>
+                            </tr>
+                            <tr>
+                                <td>Boolean</td>
+                                <td><code>var haveBananas = true;</code></td>
+                                <td><strong>true</strong> or <strong>false</strong>, no quotes!</td>
+                            </tr>
+                            <tr>
+                                <td>Undefined</td>
+                                <td><code>var strawberries;</code></td>
+                                <td>No assigned value</td>
+                            </tr>
+                            <tr>
+                                <td>Null</td>
+                                <td><code>var pumpkins = null;</code></td>
+                                <td>An intentionally empty value (not the same as 0 or undefined)</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Arrays</h3>
+<pre><code class="javascript">var list = [];
+var animals = ['cat','dog','bird'];
+animals[0];
+animals[0] = 'lemur';
+animals.length;
+animals.push('ferret');
+animals.pop();
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Notes on Variables</h3>
+                        <ul>
+                            <li>JavaScript variables are "loosely typed"</li>
+                            <li>Names begin with a letter, _, or $</li>
+                            <li>Contain letters, numbers, _, and $</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Functions, scope, and more</h1>
+                    </section>
+                    <section>
+                        <h3>Structure</h3>
+<pre><code>// Function keyword and declaration
+function myFunction() {
+  alert('hello');
+}
+// Function expression
+var myFunction = function() {
+  alert('hello');
+}
+// Call it
+myFunction();</code></pre>
+                    </section>
+                    <section>
+                        <h3>Scope</h3>
+<pre><code>var x = 1;
+function makeY(number) {
+    var y = number;
+    return y;
+}
+function changeX() {
+    x = x * 2;
+}
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Closures</h3>
+                        <p>Scope of an inner function includes the outer.</p>
+<pre><code>function addSquares(a,b) {
+   function square(x) {
+      return x * x;
+   }
+   return square(a) + square(b);
+}
+function setAlarm(message, timeout) {
+  function handle() {
+    console.log(message);
+  }
+  setTimeout(handle, timeout);
+}
+setAlarm("Wake up!", 100);
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Self-executing functions</h3>
+<pre><code>(function(){
+  var foo = 'Hello';
+  var bar = 'World!'
+  
+  function baz(){
+      return foo + ' ' + bar;
+  }
+})();
+</code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Logic and loops</h1>
+                    </section>
+                    <section>
+                        <h3>Comparisons</h3>
+                        <table>
+                            <tr>
+                                <td><code>===</code></td>
+                                <td>Equality</td>
+                            </tr>
+                            <tr>
+                                <td><code>!==</code></td>
+                                <td>Inequality</td>
+                            </tr>
+                            <tr>
+                                <td><code>></code></td>
+                                <td>Greater than</td>
+                            </tr>
+                            <tr>
+                                <td><code>>=</code></td>
+                                <td>Greater than or equal to</td>
+                            </tr>
+                            <tr>
+                                <td><code><</code></td>
+                                <td>Less than</td>
+                            </tr>
+                            <tr>
+                                <td><code><=</code></td>
+                                <td>Less than or equal to</td>
+                            </tr>
+                        </table>
+                        <h3>Logic</h3>
+                        <table>
+                            <tr>
+                                <td>&&</td>
+                                <td>And</td>
+                            </tr>
+                            <tr>
+                                <td>||</td>
+                                <td>Or</td>
+                            </tr>
+                            <tr>
+                                <td>!</td>
+                                <td>Not (this is called 'Bang')</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>If statements (Conditional)</h3>
+<pre><code contenteditable>if (numberOfStudents > 10) {
+    console.log('Yay, class!');
+}</code></pre>
+                    </section>
+                    <section>
+                        <h3>If/else statements</h3>
+<pre><code contenteditable>if (numberOfStudents > 10) {
+    console.log('Yay, class!');
+} else if (numberOfStudents > 0) {
+    console.log('... someone came!');
+} else {
+    console.log(':(');
+}</code></pre>
+                    </section>                  
+                    <section>
+                        <h3>For loops</h3>
+<pre><code contenteditable="" class="javascript">for (initialize; condition; update) {
+    // do something
+}</code></pre>  
+<pre><code contenteditable="" class="javascript">for (var i = 0; i < 5; i++) {
+    console.log(i);
+}</code></pre>                  
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Objects and the DOM</h1>
+                    </section>
+                    <section>
+                        <h3>Object literal</h3>
+<pre><code class="javascript">var myObject = {
+    myProperty: 'value pair',
+    myMethod: function(){
+        console.log(this);
+        return this;
+    }
+}</code></pre>
+                    </section>
+                    <section>
+                        <h3>Access parts of objects</h3>
+<pre><code class="javascript">var cat = {
+    name: 'Luna',
+    domicile: 'Philadelphia'
+};
+console.log(cat.name);
+console.log(cat['name']);
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Grow objects as you please</h3>
+<pre><code class="javascript">var myObject = {};
+myObject.something = 'hello';</code></pre>
+                    </section>
+                    <section>
+                        <h3>Object.prototype</h3>
+                        <p>"Allows the addition of properties to all objects of type Object."</p>
+<pre><code class="javascript">function Animal(name, sound) {
+    this.name = name || 'No name',
+    this.sound = sound || 'silent'
+}
+Animal.prototype.setName = function(newName) {
+    this.name = newName
+}
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Document Object Model</h3>
+                        <p>(essentially the webpage)</p>
+                        <img src="images/google-page.png"/>
+                    </section>
+                    <section>
+                      <h3>DOM</h3>
+                      <img src = "images/crockford-dom.png">
+                    </section>
+                    <section>
+                        <p>Try these in the console:</p>
+<pre><code class="javascript">document
+document.body
+document.URL
+</code></pre>
+                    </section>
+                    <section>
+                        <h3>Example usage</h3>
+<pre><code class="javascript">var item = document.getElementById('myitem');
+item.style.color = 'red';
+</code></pre>
+                    <p>Use an HTML document to play around!</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>End of class</h1>
+                    </section>
+                    <section>
+                        <h1>... but not learning!</h1>
+                    </section>
+                    <section>
+                        <h3>Upcoming Events</h3>
+                        <ul>
+                            <li>8/29 - Project Night, see meetup.com</li>
+                            <li>9/21 - Apps for Philly Transit Hackathon</li>
+                            <li>9/24 - September Meetup, Angular - with special guest! Thanks Haydle!</li>
+                        </ul>
+                    </section>
+            </div>
 
-		</div>
+        </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			Reveal.initialize({
-				history: true
-			});
+            Reveal.initialize({
+                history: true,
+                dependencies: [
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>
