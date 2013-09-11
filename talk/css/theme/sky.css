@@ -137,3 +137,16 @@ body {
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+h1.overlay-text, h2.overlay-text {
+  background: rgba(000,000,000,0.5); 
+  color: #fff; 
+  border-radius: 5px;
+}
+h1.overlay-text-white, h2.overlay-text-white {
+  background: rgba(999,999,999,0.5); 
+  color: #000; 
+  border-radius: 5px;
+}
+
