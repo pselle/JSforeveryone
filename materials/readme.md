@@ -7,6 +7,10 @@
 
 Each section can be done in 30 minutes, so you can do a two hour workshop, or break them up into half-hour bits and do them at a user group meeting or project night.
 
+# License
+
+This material (i.e., blog posts and page content) is licensed under a [Creative Commons Attribution-ShareAlike License](http://creativecommons.org/licenses/by/3.0/us/): you may use it, but you must give attribution, and share alike.
+
 # Coach Guidelines
 
 Help your volunteer coaches make the best environment for your attendees. These are the guidelines I've used in other workshops.
