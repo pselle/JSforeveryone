@@ -5,7 +5,12 @@
 - Logic and loops
 - Object literals and DOM, prototypes
 
-Each section can be done in 30 minutes, so you can do a two hour workshop, or break them up into half-hour bits and do them at a user group meeting or project night.
+Each section can be done in 30 minutes, so you can do a two hour workshop, or break them up into half-hour bits and do them at a user group meeting or project night. The presentation is using [reveal.js](https://github.com/hakimel/reveal.js).
+
+# Thanks
+
+This work is inspired and draws from the [MDN](https://developer.mozilla.org/en-US/), the [Girl Develop It curriculum](https://github.com/girldevelopit/gdi-core-javascript), [How to Node](http://howtonode.org/why-use-closure
+), and original work. 
 
 # License
 
